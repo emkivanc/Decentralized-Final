@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index,follow">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="canonical" href="">
+    <title>E-Vote App - Mehmet Kıvanç ERBUDAK 170709062 - MSKU - CENG3550</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            font-family: 'Quicksand', sans-serif;
+            color: #41444B;
+        }
+        nav {
+            width: 100%;
+            float: left;
+            height: 80px;
+        }
+        #information {
+            width: 100%;
+            float: left;
+            height: 30px;
+        }
+        header {
+            width: 100%;
+            float: left;
+            height: 480px;
+        }
+        #header_in {
+            width: 1280px;
+            margin: auto;
+            position: relative;
+        }
+        #banner {
+            width: 1280px;
+            margin: auto;
+            z-index: 20;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            line-height: 480px;
+            font-size: xxx-large;
+            text-shadow: 2px 2px #f2f2f2;
+        }
+        #information_in {
+            width: 1280px;
+            margin: auto;
+            line-height: 30px;
+        }
+        #information_in_left {
+            width: 640px;
+            float: left;
+            border-bottom: 1px solid #41444B;
+        }
+        #information_in_right {
+            width: 640px;
+            float: right;
+            border-bottom: 1px solid #41444B;
+            text-align: right;
+        }
+        .a {
+            text-decoration: none;
+            color: #41444B;
+            transition: 200ms ease;
+        }
+        #menubar {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        #menubar a li {
+            display: inline-block;
+            float: left;
+            padding-left: 25px;
+            padding-right: 25px;
+            transition: 225ms ease;
+        }
+        #menubar a {
+            color: #41444B;
+        }
+        #navi {
+            width: 100%;
+            float: left;
+            height: 50px;
+            line-height: 50px;
+        }
+        #navi_in {
+            width: 1280px;
+            margin: auto;
+        }
+        #menubar a li:hover {
+            background-color: #41444B;
+            color: white;
+        }
+        #menubar a li:active {
+            background-color: #DFD8C8;
+            color: #41444B;
+        }
+        .a:hover {
+            text-shadow: 1px 1px #52575D;
+        }
+        section {
+            width: 100%;
+            float: left;
+        }
+        .section-in {
+            width: 1280px;
+            margin: auto;
+        }
+        aside {
+            width: 410px;
+            float: left;
+            min-height: 50px;
+        }
+        footer {
+            width: 100%;
+            float: left;
+            height: 30px;
+            margin-bottom: 50px;
+            margin-top: 25px;
+        }
+        #footer-in {
+            width: 1280px;
+            margin: auto;
+            border-top: 1px solid #41444B;
+            line-height: 30px;
+        }
+        .nbox {
+            width: 100%;
+            float: left;
+            min-height: 45px;
+            line-height: 45px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        button {
+            width: 208px;
+            height: 40px;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #41444B;
+            color: white;
+            outline: none;
+            border: none;
+            transition: 225ms ease;
+        }
+        button:hover {
+            background-color: #52575D;
+        }
+        button:active {
+            background-color: #DFD8C8;
+            color: #41444B;
+        }
+        .page {
+            width: 1280px;
+            margin: auto;
+            min-height: 200px;
+            margin-top: 25px;
+        }
+        input[type=text] {
+            width: 200px;
+            height: 25px;
+            text-indent: 10px;
+            background-color: whitesmoke;
+            font-family: 'Quicksand', sans-serif;
+            border: 1px solid #eee;
+            border-left: 3px solid #41444B;
+            border-radius: 6px;
+            transition: 150ms ease;
+            
+        }
+        input[type=password] {
+            width: 200px;
+            height: 25px;
+            text-indent: 10px;
+            background-color: whitesmoke;
+            font-family: 'Quicksand', sans-serif;
+            border: 1px solid #eee;
+            border-left: 3px solid #41444B;
+            border-radius: 6px;
+            transition: 150ms ease;
+        }
+        input[type=text]:focus {
+            outline: none;
+            border-left: 3px solid #DFD8C8;
+        }
+        input[type=password]:focus {
+            outline: none;
+            border-left: 3px solid #DFD8C8;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="information">
+            <div id="information_in">
+                <div id="information_in_left">
+                    MSKU CENG 3550 &nbsp;|&nbsp; Decentralized Systems and Applications
+                </div>
+                <div id="information_in_right">
+                    <a href="" class="a">Create Account</a> &nbsp;|&nbsp; <a href="" class="a">Log In</a>
+                </div>
+            </div>
+        </div>
+        <div id="navi">
+            <div id="navi_in">
+                <ul id="menubar">
+                    <a href="index.html"><li>Home</li></a>
+                    <a href=""><li>Candidate 1</li></a>
+                    <a href=""><li>Candidate 2</li></a>
+                    <a href=""><li>Candidate 3</li></a>
+                </ul>
+                <div style="float: right;"><input type="text" id="candidate"><button onclick="voteForCandidate()">Vote</button></div>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div id="header_in">
+            <img src="vote.jpg" width="1280" height="480">
+            <div id="banner">
+                E-Vote App
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="page">
+            <table width="100%">
+                <tr>
+                    <td><h1>Party 1</h1></td>
+                    <td><h1>Party 2</h1></td>
+                    <td><h1>Party 3</h1></td>
+                </tr>
+                <tr>
+                    <td align="center"><img src="party.jpg" alt="" width="420" height="420"></td>
+                    <td align="center"><img src="party.jpg" alt="" width="420" height="420"></td>
+                    <td align="center"><img src="party.jpg" alt="" width="420" height="420"></td>
+                </tr>
+                <tr height="200">
+                    <td id="candidate-1"></td>
+                    <td id="candidate-2"></td>
+                    <td id="candidate-3"></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <div id="footer-in">
+            Mehmet Kıvanç ERBUDAK - 170709062 - CENG - MSKU
+        </div>
+    </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4-rc.0/web3.min.js" integrity="sha512-RGPKVfQewHGfk9yaB7ThGPKAQU+civS5awsfStLg22jrWbqgDkNzPtIwNFpFApr3ccjB730SRxi+KnDjhIuTpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="./index.js"></script>
+</html>
